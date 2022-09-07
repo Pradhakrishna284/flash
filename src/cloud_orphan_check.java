@@ -12,7 +12,7 @@ public class cloud_orphan_check {
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
 			// TDR database(Determination)
-			//String driver = "oracle.jdbc.driver.OracleDriver";
+			String driver = "oracle.jdbc.driver.OracleDriver";
 			String jdbc_url = "jdbc:oracle:thin:@content.qa.db.int.thomsonreuters.com:1521:ndd0148b";
 			String username_TDR = "CONTENT_REPO ";
 			String password_TDR = "RedWhale";
@@ -24,7 +24,7 @@ public class cloud_orphan_check {
 			try 
 			{
 				// create jdbc connection object and load class
-				//Class.forName(driver);
+				Class.forName(driver);
 				dbconnect = DriverManager.getConnection(jdbc_url, username_TDR, password_TDR);
 				dbconnect.setSchema("SBXTAX5");
 
