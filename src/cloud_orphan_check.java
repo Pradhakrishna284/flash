@@ -91,6 +91,7 @@ public class cloud_orphan_check {
 			} catch (SQLException e) {
 				System.out.println(e.getErrorCode());
 				System.out.println(e.getMessage());
+				System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
 				System.out.println("There is an execption, I am in catch block");
 			} finally {
 //				if (resultSet != null)
